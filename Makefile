@@ -1,6 +1,6 @@
 NAME    = push_swap
 CFLAGS  = -Wall -Wextra -Werror
-SRC		= main.c push.c rotate.c swap.c
+SRC		= main.c push.c rotate.c swap.c force.c ft_normalize.c ft_error.c
 OBJ		= ${SRC:.c=.o}
 LIBFT = libft/libft.a
 INC = -I libft/includes
