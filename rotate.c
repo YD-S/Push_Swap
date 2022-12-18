@@ -6,7 +6,7 @@
 /*   By: ysingh <ysingh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 07:24:31 by ysingh            #+#    #+#             */
-/*   Updated: 2022/12/16 21:12:43 by ysingh           ###   ########.fr       */
+/*   Updated: 2022/12/17 14:43:39 by ysingh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	rr(t_stack *data)
 	data->str = ft_strjoin(data->str, "rr\n");
 }
 
-void	rra(t_stack *data)
+void	rra(t_stack *data, int flag)
 {
 	int	temp;
 	int	i;
@@ -75,10 +75,11 @@ void	rra(t_stack *data)
 		}
 		data->stack_a[i] = temp;
 	}
-	data->str = ft_strjoin(data->str, "rra\n");
+	if (flag == 1)
+		data->str = ft_strjoin(data->str, "rra\n");
 }
 
-void	rrb(t_stack *data)
+void	rrb(t_stack *data, int flag)
 {
 	int	temp;
 	int	i;
@@ -94,5 +95,6 @@ void	rrb(t_stack *data)
 		}
 		data->stack_b[i] = temp;
 	}
-	data->str = ft_strjoin(data->str, "rrb\n");
+	if (flag == 1)
+		data->str = ft_strjoin(data->str, "rrb\n");
 }

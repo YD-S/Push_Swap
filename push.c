@@ -6,7 +6,7 @@
 /*   By: ysingh <ysingh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 07:25:28 by ysingh            #+#    #+#             */
-/*   Updated: 2022/12/16 21:13:05 by ysingh           ###   ########.fr       */
+/*   Updated: 2022/12/18 11:40:41 by ysingh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,11 @@ void	pb(t_stack *data)
 		data->size_a--;
 	}
 	data->str = ft_strjoin(data->str, "pb\n");
+}
+
+void	rrr(t_stack *data)
+{
+	rra(data, 0);
+	rrb(data, 0);
+	data->str = ft_strjoin(data->str, "rrr");
 }
