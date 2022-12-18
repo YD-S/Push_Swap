@@ -6,7 +6,7 @@
 /*   By: ysingh <ysingh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 20:09:38 by ysingh            #+#    #+#             */
-/*   Updated: 2022/12/18 12:17:31 by ysingh           ###   ########.fr       */
+/*   Updated: 2022/12/18 17:55:23 by ysingh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,6 @@
 
 void	force(t_stack *data)
 {
-	print_stack(data);
-	pb(data);
-	pb(data);
-	print_stack(data);
-	rrr(data);
 	print_stack(data);
 }
 
