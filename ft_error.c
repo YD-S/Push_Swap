@@ -6,7 +6,7 @@
 /*   By: ysingh <ysingh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 22:31:50 by ysingh            #+#    #+#             */
-/*   Updated: 2022/12/17 01:54:56 by ysingh           ###   ########.fr       */
+/*   Updated: 2022/12/18 12:20:37 by ysingh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,6 @@ void	ft_error(void)
 	ft_putendl_fd("|                     PUSH_SWAP                      |", 2);
 	ft_putendl_fd("|                    PARAMS ERROR                    |", 2);
 	ft_putendl_fd("+====================================================+\n", 2);
+	ft_putendl_fd("\033[0m", 2);
 	exit (0);
 }
