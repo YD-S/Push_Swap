@@ -6,7 +6,7 @@
 /*   By: ysingh <ysingh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 04:38:49 by ysingh            #+#    #+#             */
-/*   Updated: 2022/12/18 11:40:56 by ysingh           ###   ########.fr       */
+/*   Updated: 2022/12/18 21:19:14 by ysingh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,5 @@ void		pa(t_stack *data);
 void		pb(t_stack *data);
 void		ft_normalize(t_stack *data);
 void		ft_error(void);
+int			ft_isnumber(char *str);
 #endif
