@@ -6,7 +6,7 @@
 /*   By: ysingh <ysingh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 05:41:24 by ysingh            #+#    #+#             */
-/*   Updated: 2022/12/18 22:45:47 by ysingh           ###   ########.fr       */
+/*   Updated: 2022/12/22 11:50:42 by ysingh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,19 +55,8 @@ int	main(int argc, char **argv)
 	t_stack	*data;
 	int		i;
 
-	i = 0;
-	if (argc < 2)
+	if (argc == 1)
 		ft_error();
-	if (argc == 2)
-	{
-		if (ft_strchr(argv[1], ' '))
-			argv = ft_split(argv[1], ' ');
-		else
-			ft_error();
-		while (argv[i])
-			i++;
-		argc = i;
-	}
 	i = 1;
 	while (argv[i])
 	{
