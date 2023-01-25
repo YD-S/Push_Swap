@@ -1,7 +1,7 @@
 NAME    = push_swap
 CFLAGS  = -Wall -Wextra -Werror -g
 SRC		= main.c push.c rotate.c swap.c force.c ft_normalize.c ft_error.c parser.c memory.c
-OBJ		= ${SRC:.c=.o}
+OBJ		= ${addprefix obj/, ${SRC:.c=.o}}
 LIBFT = libft/libft.a
 INC = -I libft/includes
 COLOUR_GREEN=\033[0;32m
@@ -19,7 +19,7 @@ $(LIBFT):
 	@make -C libft
 
 clean:
-	@rm -rf $(OBJ)
+	@rm -rf obj
 	@make -C libft/ clean
 	@echo "$(COLOUR_RED)🔥 🔥 Deleting all .o Files 🗑️ 🗑️$(COLOUR_END)"
 fclean: clean
@@ -27,7 +27,8 @@ fclean: clean
 	@make -C libft/ fclean
 	@echo "$(COLOUR_RED)🔥 🔥 Deleting .a File 🗑️ 🗑️$(COLOUR_END)"
 
-%.o: %.c
+obj/%.o: %.c
+	@mkdir -p obj
 	@gcc $(CFLAGS) -o $@ -c $<
 
 re: fclean all

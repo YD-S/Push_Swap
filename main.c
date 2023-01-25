@@ -6,7 +6,7 @@
 /*   By: ysingh <ysingh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 05:41:24 by ysingh            #+#    #+#             */
-/*   Updated: 2023/01/26 01:49:34 by ysingh           ###   ########.fr       */
+/*   Updated: 2023/01/25 22:43:25 by cigarcia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,7 @@ int	main(int argc, char **argv)
 	parser(data, argc, argv);
 	ft_repeat_nums(data, argc);
 	ft_normalize(data);
+	print_stack(data);
 	force(data);
 	ft_printf("%s\n", data->str);
 	ft_free(data);
