@@ -6,7 +6,7 @@
 /*   By: ysingh <ysingh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 22:08:03 by ysingh            #+#    #+#             */
-/*   Updated: 2022/12/18 20:52:32 by ysingh           ###   ########.fr       */
+/*   Updated: 2023/01/19 21:24:23 by ysingh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,24 @@ void	ft_normalize(t_stack *data)
 {
 	int	*temp;
 	int	*temp2;
-	int	i;
-	int	j;
 
 	temp = malloc(sizeof(int) * data->max);
+	ft_check_error(temp);
 	ft_memcpy(temp, data->stack_a, sizeof(int) * data->max);
 	ft_sort_bubble(temp, data);
 	temp2 = malloc(sizeof(int) * data->max);
+	ft_check_error(temp2);
+	ft_cpy_stack(data, temp, temp2);
+	free(data->stack_a);
+	data->stack_a = temp2;
+	free(temp);
+}
+
+void	ft_cpy_stack(t_stack *data, int *temp, int *temp2)
+{
+	int	i;
+	int	j;
+
 	i = 0;
 	while (i < data->max)
 	{
@@ -59,7 +70,4 @@ void	ft_normalize(t_stack *data)
 		}
 		i++;
 	}
-	free(data->stack_a);
-	data->stack_a = temp2;
-	free(temp);
 }

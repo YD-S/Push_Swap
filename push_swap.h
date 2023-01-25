@@ -6,7 +6,7 @@
 /*   By: ysingh <ysingh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 04:38:49 by ysingh            #+#    #+#             */
-/*   Updated: 2022/12/21 11:15:34 by ysingh           ###   ########.fr       */
+/*   Updated: 2023/01/26 01:49:45 by ysingh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,10 @@ void		pb(t_stack *data);
 void		ft_normalize(t_stack *data);
 void		ft_error(void);
 int			ft_isnumber(char *str);
+t_stack		*ft_init(int argc);
+void		parser(t_stack *data, int argc, char **argv);
+void		ft_free(t_stack *data);
+void		ft_dojoin(t_stack *data, char *str);
+void		ft_check_error(int *var);
+void		ft_cpy_stack(t_stack *data, int *temp, int *temp2);
 #endif

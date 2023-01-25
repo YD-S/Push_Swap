@@ -6,11 +6,25 @@
 /*   By: ysingh <ysingh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 05:41:24 by ysingh            #+#    #+#             */
-/*   Updated: 2022/12/22 11:50:42 by ysingh           ###   ########.fr       */
+/*   Updated: 2023/01/26 01:49:34 by ysingh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+static void	ft_leak(void)
+{
+	system("leaks -q push_swap");
+}
+
+void	ft_dojoin(t_stack *data, char *str)
+{
+	char	*temp;
+
+	temp = ft_strjoin(data->str, str);
+	free(data->str);
+	data->str = temp;
+}
 
 static void	ft_repeat_nums(t_stack *data, int argc)
 {
@@ -24,7 +38,10 @@ static void	ft_repeat_nums(t_stack *data, int argc)
 		while (j < argc - 1)
 		{
 			if (data->stack_a[i] == data->stack_a[j] && i != j)
+			{
+				ft_free(data);
 				ft_error();
+			}
 			j++;
 		}
 		i++;
@@ -32,44 +49,37 @@ static void	ft_repeat_nums(t_stack *data, int argc)
 	}
 }
 
-void	ft_init(t_stack *data, int argc, char **argv)
+t_stack	*ft_init(int argc)
 {
-	int	i;
+	t_stack	*data;
 
-	i = 0;
+	data = (t_stack *)malloc(sizeof(t_stack));
+	if (!data)
+		exit(0);
 	data->stack_a = malloc(sizeof(int) * argc);
+	if (!data->stack_a)
+		ft_free(data);
 	data->stack_b = malloc(sizeof(int) * argc);
+	if (!data->stack_b)
+		ft_free(data);
 	data->str = ft_strdup("");
 	data->max = argc - 1;
 	data->size_a = argc - 1;
 	data->size_b = 0;
-	while (i < argc - 1)
-	{
-		data->stack_a[i] = ft_atoi(argv[i + 1]);
-		i++;
-	}
+	return (data);
 }
 
 int	main(int argc, char **argv)
 {
 	t_stack	*data;
-	int		i;
 
-	if (argc == 1)
-		ft_error();
-	i = 1;
-	while (argv[i])
-	{
-		if (!ft_isnumber(argv[i]))
-			ft_error();
-		i++;
-	}
-	data = (t_stack *)malloc(sizeof(t_stack));
-	ft_init(data, argc, argv);
+	atexit(ft_leak);
+	data = ft_init(argc);
+	parser(data, argc, argv);
 	ft_repeat_nums(data, argc);
 	ft_normalize(data);
 	force(data);
 	ft_printf("%s\n", data->str);
-	return (free(data->str), free(data->stack_b), free(data->stack_a),
-		free(data), 0);
+	ft_free(data);
+	return (0);
 }

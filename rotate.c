@@ -6,7 +6,7 @@
 /*   By: ysingh <ysingh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 07:24:31 by ysingh            #+#    #+#             */
-/*   Updated: 2022/12/17 14:43:39 by ysingh           ###   ########.fr       */
+/*   Updated: 2023/01/26 01:26:18 by ysingh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ra(t_stack *data, int flag)
 		data->stack_a[i] = temp;
 	}
 	if (flag == 1)
-		data->str = ft_strjoin(data->str, "ra\n");
+		ft_dojoin(data, "ra\n");
 }
 
 void	rb(t_stack *data, int flag)
@@ -49,14 +49,14 @@ void	rb(t_stack *data, int flag)
 		data->stack_b[i] = temp;
 	}
 	if (flag == 1)
-		data->str = ft_strjoin(data->str, "rb\n");
+		ft_dojoin(data, "rb\n");
 }
 
 void	rr(t_stack *data)
 {
 	ra(data, 0);
 	rb(data, 0);
-	data->str = ft_strjoin(data->str, "rr\n");
+	ft_dojoin(data, "rr\n");
 }
 
 void	rra(t_stack *data, int flag)
@@ -76,7 +76,7 @@ void	rra(t_stack *data, int flag)
 		data->stack_a[i] = temp;
 	}
 	if (flag == 1)
-		data->str = ft_strjoin(data->str, "rra\n");
+		ft_dojoin(data, "rra\n");
 }
 
 void	rrb(t_stack *data, int flag)
@@ -96,5 +96,5 @@ void	rrb(t_stack *data, int flag)
 		data->stack_b[i] = temp;
 	}
 	if (flag == 1)
-		data->str = ft_strjoin(data->str, "rrb\n");
+		ft_dojoin(data, "rrb\n");
 }
