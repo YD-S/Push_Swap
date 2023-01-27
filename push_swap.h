@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysingh <ysingh@student.42malaga.com>       +#+  +:+       +#+        */
+/*   By: ysingh <ysingh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 04:38:49 by ysingh            #+#    #+#             */
-/*   Updated: 2023/01/27 16:38:40 by ysingh           ###   ########.fr       */
+/*   Updated: 2023/01/27 20:16:11 by ysingh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ typedef struct s_stack
 }			t_stack;
 // for debug //
 void		print_stack(t_stack *data);
-void		force(t_stack *data);
 // for debug //
 void		ra(t_stack *data, int flag);
 void		rb(t_stack *data, int flag);
@@ -52,4 +51,8 @@ void		ft_free(t_stack *data);
 void		ft_dojoin(t_stack *data, char *str);
 void		ft_check_error(int *var);
 void		ft_cpy_stack(t_stack *data, int *temp, int *temp2);
+void		radix(t_stack *data);
+void		sort_two(t_stack *data);
+void		sort_three(t_stack *data);
+void		ft_algorithm(t_stack *data);
 #endif

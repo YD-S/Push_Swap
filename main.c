@@ -3,19 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysingh <ysingh@student.42malaga.com>       +#+  +:+       +#+        */
+/*   By: ysingh <ysingh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 05:41:24 by ysingh            #+#    #+#             */
-/*   Updated: 2023/01/27 17:37:23 by ysingh           ###   ########.fr       */
+/*   Updated: 2023/01/27 20:06:30 by ysingh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-/*static void	ft_leak(void)
-{
-	system("leaks -q push_swap");
-}*/
 
 void	ft_dojoin(t_stack *data, char *str)
 {
@@ -53,7 +48,6 @@ t_stack	*ft_init(int argc, char **argv)
 {
 	t_stack	*data;
 
-
 	data = (t_stack *)malloc(sizeof(t_stack));
 	if (!data)
 		exit(0);
@@ -68,8 +62,8 @@ t_stack	*ft_init(int argc, char **argv)
 	if (!data->stack_b)
 		ft_free(data);
 	data->str = ft_strdup("");
-	data->max = data->total_size - 1;
-	data->size_a = data->total_size - 1;
+	data->max = data->total_size;
+	data->size_a = data->total_size;
 	data->size_b = 0;
 	return (data);
 }
@@ -78,13 +72,12 @@ int	main(int argc, char **argv)
 {
 	t_stack	*data;
 
-	//atexit(ft_leak);
 	data = ft_init(argc, argv);
 	parser(data, argc, argv);
 	ft_repeat_nums(data);
 	ft_normalize(data);
+	ft_algorithm(data);
 	print_stack(data);
-	//force(data);
 	ft_printf("%s\n", data->str);
 	ft_free(data);
 	return (0);
