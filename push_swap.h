@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysingh <ysingh@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ysingh <ysingh@student.42malaga.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 04:38:49 by ysingh            #+#    #+#             */
-/*   Updated: 2023/01/26 01:49:45 by ysingh           ###   ########.fr       */
+/*   Updated: 2023/01/27 16:38:40 by ysingh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct s_stack
 	int		size_b;
 	char	*str;
 	int		max;
+	int		total_size;
 }			t_stack;
 // for debug //
 void		print_stack(t_stack *data);
@@ -45,7 +46,7 @@ void		pb(t_stack *data);
 void		ft_normalize(t_stack *data);
 void		ft_error(void);
 int			ft_isnumber(char *str);
-t_stack		*ft_init(int argc);
+t_stack		*ft_init(int argc, char **argv);
 void		parser(t_stack *data, int argc, char **argv);
 void		ft_free(t_stack *data);
 void		ft_dojoin(t_stack *data, char *str);

@@ -19,7 +19,7 @@ void	ft_error(void)
 	ft_putendl_fd("|                     PUSH_SWAP                      |", 2);
 	ft_putendl_fd("|                    PARAMS ERROR                    |", 2);
 	ft_putendl_fd("+====================================================+\n",
-		2);
+					2);
 	ft_putendl_fd("\033[0m", 2);
 	exit(0);
 }
