@@ -28,9 +28,7 @@ typedef struct s_stack
 	int		max;
 	int		total_size;
 }			t_stack;
-// for debug //
-void		print_stack(t_stack *data);
-// for debug //
+
 void		ra(t_stack *data, int flag);
 void		rb(t_stack *data, int flag);
 void		rr(t_stack *data);
