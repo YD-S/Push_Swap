@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysingh <ysingh@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ysingh <ysingh@student.42malaga.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 07:25:28 by ysingh            #+#    #+#             */
-/*   Updated: 2023/01/26 01:28:03 by ysingh           ###   ########.fr       */
+/*   Updated: 2023/01/30 19:13:21 by ysingh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ void	pb(t_stack *data)
 {
 	int	i;
 
-	printf("ME LLAMO PETER PARKER\n");
 	if (data->size_a > 0)
 	{
 		i = data->size_b + 1;

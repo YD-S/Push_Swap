@@ -16,6 +16,7 @@ void	ra(t_stack *data, int flag)
 {
 	int	temp;
 	int	i;
+
 	if (data->size_a > 1)
 	{
 		temp = data->stack_a[0];

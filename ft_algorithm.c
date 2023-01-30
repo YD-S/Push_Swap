@@ -6,7 +6,7 @@
 /*   By: ysingh <ysingh@student.42malaga.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 19:59:01 by ysingh            #+#    #+#             */
-/*   Updated: 2023/01/30 19:01:40 by ysingh           ###   ########.fr       */
+/*   Updated: 2023/01/30 19:26:17 by ysingh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ void	ft_rra_pb(t_stack *data)
 	pb(data);
 }
 
-void radix(t_stack *stacks)
+void	radix(t_stack *stacks)
 {
-	int i;
-	uint32_t mask;
+	int			i;
+	uint32_t	mask;
 
 	i = 0;
 	mask = 0b1;
@@ -45,7 +45,7 @@ void radix(t_stack *stacks)
 		{
 			if (!(stacks->stack_a[0] & mask))
 				pb(stacks);
-			else
+			else if (stacks->size_a > 1)
 				ra(stacks, 1);
 			i++;
 		}
