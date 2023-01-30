@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysingh <ysingh@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ysingh <ysingh@student.42malaga.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 04:38:49 by ysingh            #+#    #+#             */
-/*   Updated: 2023/01/27 20:16:11 by ysingh           ###   ########.fr       */
+/*   Updated: 2023/01/30 15:54:27 by ysingh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,10 @@ void		ft_cpy_stack(t_stack *data, int *temp, int *temp2);
 void		radix(t_stack *data);
 void		sort_two(t_stack *data);
 void		sort_three(t_stack *data);
+void		sort_four(t_stack *data);
+void		sort_five(t_stack *data);
+void		ft_ra_pb(t_stack *data);
+void		ft_rra_pb(t_stack *data);
 void		ft_algorithm(t_stack *data);
+int			ft_is_sorted(t_stack *data);
 #endif

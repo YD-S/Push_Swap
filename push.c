@@ -42,6 +42,7 @@ void	pb(t_stack *data)
 {
 	int	i;
 
+	printf("ME LLAMO PETER PARKER\n");
 	if (data->size_a > 0)
 	{
 		i = data->size_b + 1;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysingh <ysingh@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ysingh <ysingh@student.42malaga.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 07:24:31 by ysingh            #+#    #+#             */
-/*   Updated: 2023/01/26 01:26:18 by ysingh           ###   ########.fr       */
+/*   Updated: 2023/01/30 19:12:27 by ysingh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	ra(t_stack *data, int flag)
 {
 	int	temp;
 	int	i;
-
 	if (data->size_a > 1)
 	{
 		temp = data->stack_a[0];

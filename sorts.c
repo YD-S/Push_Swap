@@ -6,7 +6,7 @@
 /*   By: ysingh <ysingh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 19:05:27 by ysingh            #+#    #+#             */
-/*   Updated: 2023/01/27 22:00:16 by ysingh           ###   ########.fr       */
+/*   Updated: 2023/01/30 15:37:18 by ysingh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,48 @@ void	sort_three(t_stack *data)
 	}
 }
 
-// void	radix(t_stack *data)
-// {
-// }
+void	sort_four(t_stack *data)
+{
+	if (data->stack_a[1] == 4)
+		ra(data, 1);
+	else if (data->stack_a[2] == 4)
+	{
+		ra(data, 1);
+		ra(data, 1);
+	}
+	else if (data->stack_a[3] == 4)
+		rra(data, 1);
+	pb(data);
+	sort_three(data);
+	pa(data);
+	ra(data, 1);
+}
+
+void	sort_five(t_stack *data)
+{
+	if (data->stack_a[0] == 5)
+		pb(data);
+	else if (data->stack_a[1] == 5)
+		ft_ra_pb(data);
+	else if (data->stack_a[2] == 5)
+	{
+		ra(data, 1);
+		ft_ra_pb(data);
+	}
+	else if (data->stack_a[3] == 5)
+	{
+		rra(data, 1);
+		ft_rra_pb(data);
+	}
+	else if (data->stack_a[4] == 5)
+		ft_rra_pb(data);
+	sort_four(data);
+	pa(data);
+	ra(data, 1);
+}
+
+void	ft_ra_pb(t_stack *data)
+{
+	ra(data, 1);
+	pb(data);
+}

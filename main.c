@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysingh <ysingh@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ysingh <ysingh@student.42malaga.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 05:41:24 by ysingh            #+#    #+#             */
-/*   Updated: 2023/01/27 20:06:30 by ysingh           ###   ########.fr       */
+/*   Updated: 2023/01/30 19:00:31 by ysingh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static void	ft_repeat_nums(t_stack *data)
 	i = 0;
 	while (i < data->total_size - 1)
 	{
-		j = 0;
+		j = i;
 		while (j < data->total_size - 1)
 		{
 			if (data->stack_a[i] == data->stack_a[j] && i != j)
@@ -40,7 +40,6 @@ static void	ft_repeat_nums(t_stack *data)
 			j++;
 		}
 		i++;
-		j = 0;
 	}
 }
 
@@ -68,6 +67,20 @@ t_stack	*ft_init(int argc, char **argv)
 	return (data);
 }
 
+int	ft_is_sorted(t_stack *data)
+{
+	int	i;
+
+	i = 0;
+	while (i < data->total_size - 1)
+	{
+		if (data->stack_a[i] > data->stack_a[i + 1])
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
 int	main(int argc, char **argv)
 {
 	t_stack	*data;
@@ -77,7 +90,6 @@ int	main(int argc, char **argv)
 	ft_repeat_nums(data);
 	ft_normalize(data);
 	ft_algorithm(data);
-	print_stack(data);
 	ft_printf("%s\n", data->str);
 	ft_free(data);
 	return (0);
