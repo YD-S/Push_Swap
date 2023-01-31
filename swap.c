@@ -12,6 +12,10 @@
 
 #include "push_swap.h"
 
+// TODO: add comments
+//	- what does this function do?
+//	- what are the parameters?
+
 void	sa(t_stack *data, int flag)
 {
 	int	temp;
