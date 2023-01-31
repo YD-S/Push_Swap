@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_normalize.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysingh <ysingh@student.42malaga.com>       +#+  +:+       +#+        */
+/*   By: ysingh <ysingh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 22:08:03 by ysingh            #+#    #+#             */
-/*   Updated: 2023/01/26 20:57:54 by ysingh           ###   ########.fr       */
+/*   Updated: 2023/01/31 12:33:37 by ysingh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	ft_sort_bubble(int *temp, t_stack *data)
+void	ft_sort_bubble(int *temp, t_stack *data)
 {
 	int	temp_swap;
 	int	i;

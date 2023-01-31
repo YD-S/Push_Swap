@@ -6,13 +6,11 @@
 /*   By: ysingh <ysingh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 15:16:55 by ysingh            #+#    #+#             */
-/*   Updated: 2022/10/05 15:25:01 by ysingh           ###   ########.fr       */
+/*   Updated: 2023/01/31 12:34:49 by ysingh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	ft_check_sign(int sign);
 
 int	ft_atoi(const char *str)
 {

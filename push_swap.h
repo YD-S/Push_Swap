@@ -6,7 +6,7 @@
 /*   By: ysingh <ysingh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 04:38:49 by ysingh            #+#    #+#             */
-/*   Updated: 2023/01/31 12:25:20 by ysingh           ###   ########.fr       */
+/*   Updated: 2023/01/31 12:35:09 by ysingh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -209,4 +209,15 @@ void		ft_algorithm(t_stack *data);
  * @return 1 if the stack is sorted, 0 if not.
 */
 int			ft_is_sorted(t_stack *data);
+/**
+ * @brief Checks if the stack has repeated numbers.
+ * @param *data pointer to the struct that holds the stack.
+*/
+void		ft_repeat_nums(t_stack *data);
+/**
+ * @brief Sorts the stack using bubble sort.
+ * @param *temp pointer to the temp stack.
+ * @param *data pointer to the struct that holds the stack.
+*/
+void		ft_sort_bubble(int *temp, t_stack *data);
 #endif

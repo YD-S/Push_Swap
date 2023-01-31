@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysingh <ysingh@student.42malaga.com>       +#+  +:+       +#+        */
+/*   By: ysingh <ysingh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 05:41:24 by ysingh            #+#    #+#             */
-/*   Updated: 2023/01/30 19:00:31 by ysingh           ###   ########.fr       */
+/*   Updated: 2023/01/31 12:32:53 by ysingh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_dojoin(t_stack *data, char *str)
 	data->str = temp;
 }
 
-static void	ft_repeat_nums(t_stack *data)
+void	ft_repeat_nums(t_stack *data)
 {
 	int	i;
 	int	j;
